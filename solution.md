@@ -73,7 +73,7 @@ DROP TABLE db.tablename_old;
 
 ## Задание 3 - Написать рассчет количества вторников между двумя датами на PHP.
 ``` php
-function getDayOfWeekCountBetweenDateTimes(DateTime $from, DateTime $to, $searched_day_of_the_week=2)
+function getDayOfWeekCountBetweenDateTimes(DateTime $from, DateTime $to, int $searched_day_of_the_week=2): int
 {
     $DAYS_IN_WEEK = 7;
 	
@@ -90,7 +90,7 @@ function getDayOfWeekCountBetweenDateTimes(DateTime $from, DateTime $to, $search
 
 }
 
-function isDayIncludedWhenAddingDays(DateTime $start_date, $days_to_add, $searched_day_of_the_week)
+function isDayIncludedWhenAddingDays(DateTime $start_date, int $days_to_add, int $searched_day_of_the_week): bool
 {
 	$DAYS_IN_WEEK = 7;
 	
