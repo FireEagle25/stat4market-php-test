@@ -17,7 +17,7 @@ SELECT DISTINCT on (group_id) users.*
 FROM users
 LEFT JOIN groups
   ON users.group_id = groups.id
-ORDER BY group_id, posts_qty Desc
+ORDER BY group_id, posts_qty DESC
 ```
 
 ### 3 - выборка групп, количество пользователей в которых превышает 10000.
@@ -46,8 +46,8 @@ FROM groups
 LEFT JOIN users
   ON groups.id = users.group_id
 GROUP BY groups.id
-ORDER BY users_posts_count desc
-limit 2
+ORDER BY users_posts_count DESC
+LIMIT 2
 ```
 
 ## Задание 2 - Написать SQL-запросы (MySQL) для добавления трех полей, изменения имени одного поля и добавления двух индексов в базу данных размером свыше 100 ГБ и более 8 миллионов строк.
